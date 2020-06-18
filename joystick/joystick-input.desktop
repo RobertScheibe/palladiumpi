@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=joystick-input
+Comment=Joystick input
+NoDisplay=true
+Exec=/home/pi/src/joystick/joystick-input.py
+Path=/home/pi/src/joystick
+Terminal=false
+Categories=Application;
