@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 # The above line makes this executible in unix systems
 
 #    Asteroids Infinity
@@ -616,9 +616,10 @@ def main():
     small_font = pygame.font.Font("font/Vectorb.ttf", 10)
     large_font = pygame.font.Font("font/Vectorb.ttf", 40)
     loadsounds()
-    screen = pygame.display.set_mode(screensize)
+    screen = pygame.display.set_mode(screensize,FULLSCREEN|DOUBLEBUF|HWSURFACE)
     screen.fill(backcolor)
     pygame.display.flip()
+    pygame.mouse.set_visible(False) 
     fullscreen = 0
     pygame.display.set_caption("Asteroids Infinity")
     volume = 100
@@ -1048,9 +1049,9 @@ def main():
                 beattype = 1
         viewpoint[0] += viewpointspeed[0] / fps
         viewpoint[1] += viewpointspeed[1] / fps
+        screen.fill((backcolor))
         Objects.update()
         ProtoObjs.update()
-        screen.fill((backcolor))
         #Objects.draw(screen)
         dirtyrects = []
         for sprite in ProtoObjs.sprites():

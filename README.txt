@@ -26,3 +26,18 @@ Path=/home/pi/src/joystick
 Terminal=false
 Categories=Application;
 """
+
+add game to lxd menu, add game.desktop file in directory ~/.local/share/applications
+"""
+[Desktop Entry]
+Type=Application
+Name=Asteroids
+Comment=Asteroids pygame
+Icon=/usr/share/pixmaps/minecraft-pi.png
+StartupNotify=true
+NoDisplay=false
+Exec=/home/pi/src/AsteroidsInfinity/AsteroidsInfinity.py
+Path=/home/pi/src/AsteroidsInfinity
+Terminal=false
+Categories=Application;Game;
+"""
